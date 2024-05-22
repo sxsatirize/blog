@@ -50,7 +50,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ff0000; /* Красный акцент */
+    color: #ff0000;
 }
 
 nav ul li.logo-link {
@@ -66,19 +66,27 @@ nav ul li.logo-link img {
     width: 100%;
     overflow: hidden;
     position: relative;
-    margin: 20px 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    position: relative;
 }
 
 .slide {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    min-width: 100%;
+    box-sizing: border-box;
     position: relative;
 }
 
 .slide img {
     width: 100%;
-    height: 300px;
+    height: 400px;
     object-fit: cover;
 }
 
@@ -99,34 +107,54 @@ nav ul li.logo-link img {
     display: inline-block;
     padding: 10px 20px;
     color: #fff;
-    background: #ff0000; /* Красный акцент */
+    background: #ff0000;
     text-decoration: none;
     border-radius: 5px;
     transition: background 0.3s ease;
 }
 
 .btn:hover {
-    background: #00ffff; /* Неоново-синий акцент */
+    background: #00ffff;
 }
 
-main {
-    padding: 20px;
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .content {
+    padding: 20px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     gap: 20px;
 }
 
 .section {
-    flex: 1;
-    min-width: 300px; /* Минимальная ширина для каждого раздела */
+    flex: 1 1 calc(33.333% - 40px); /* Three columns with space in-between */
+    box-sizing: border-box;
 }
 
-.article-card,
-.podcast-card {
+.article-card, .podcast-card {
     background: #fff;
     padding: 20px;
     margin-bottom: 20px;
@@ -135,8 +163,7 @@ main {
     text-align: center;
 }
 
-.article-card img,
-.podcast-card img {
+.article-card img, .podcast-card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
@@ -163,7 +190,7 @@ footer .social-links a {
 }
 
 footer .social-links a:hover {
-    color: #ff0000; /* Красный акцент */
+    color: #ff0000;
 }
 
 @media (max-width: 768px) {
@@ -187,10 +214,8 @@ footer .social-links a:hover {
         flex-direction: column;
     }
 
-    .recent-articles,
-    .popular-posts,
-    .latest-podcasts {
-        min-width: 100%;
+    .section {
+        flex: 1 1 100%;
     }
 }
 

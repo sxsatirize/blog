@@ -28,15 +28,27 @@
     </header>
     <main>
         <section class="slider">
-            <div class="slide">
-                <img src="slide1.jpg" alt="Article 1">
-                <div class="slide-content">
-                    <h2>Заголовок Статьи 1</h2>
-                    <p>Краткое описание статьи.</p>
-                    <a href="articles.html" class="btn">Читать далее</a>
+            <div class="slides">
+                <div class="slide">
+                    <img src="slide1.jpg" alt="Article 1">
+                    <div class="slide-content">
+                        <h2>Заголовок Статьи 1</h2>
+                        <p>Краткое описание статьи.</p>
+                        <a href="articles.html" class="btn">Читать далее</a>
+                    </div>
                 </div>
+                <div class="slide">
+                    <img src="slide2.jpg" alt="Article 2">
+                    <div class="slide-content">
+                        <h2>Заголовок Статьи 2</h2>
+                        <p>Краткое описание статьи.</p>
+                        <a href="articles.html" class="btn">Читать далее</a>
+                    </div>
+                </div>
+                <!-- Add more slides as needed -->
             </div>
-            <!-- Add more slides as needed -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </section>
         <section class="content">
             <div class="section recent-articles">
@@ -44,7 +56,7 @@
                 <div class="article-card">
                     <img src="article1.jpg" alt="Article 1">
                     <h3>Заголовок Статьи 1</h3>
-                    <p>Краткое описание статьи.</п>
+                    <p>Краткое описание статьи.</p>
                     <a href="articles.html" class="btn">Читать далее</a>
                 </div>
                 <!-- Add more article cards as needed -->
@@ -54,7 +66,7 @@
                 <div class="article-card">
                     <img src="popular1.jpg" alt="Popular Post 1">
                     <h3>Заголовок Популярного Поста 1</h3>
-                    <п>Краткое описание поста.</п>
+                    <p>Краткое описание поста.</p>
                     <a href="blog.html" class="btn">Читать далее</a>
                 </div>
                 <!-- Add more popular post cards as needed -->
@@ -64,7 +76,7 @@
                 <div class="podcast-card">
                     <img src="podcast1.jpg" alt="Podcast 1">
                     <h3>Заголовок Подкаста 1</h3>
-                    <п>Краткое описание подкаста.</п>
+                    <p>Краткое описание подкаста.</p>
                     <a href="podcasts.html" class="btn">Слушать</a>
                 </div>
                 <!-- Add more podcast cards as needed -->
@@ -73,13 +85,15 @@
     </main>
     <footer>
         <div class="container">
-            <п>&copy; 2024 Мой Блог. Все права защищены.</п>
+            <p>&copy; 2024 Мой Блог. Все права защищены.</p>
             <div class="social-links">
-                <а href="#">Facebook</а>
-                <а href="#">Twitter</а>
-                <а href="#">Instagram</а>
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
             </div>
         </div>
     </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
